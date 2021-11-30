@@ -2,7 +2,7 @@
 
 > valgrind是一个Linux下的动态内存检测工具，其包括的几个功能可以帮助开发者发现使用中的内存泄漏情况
 
-![img.png](Learning-Notes/images/img.png)
+![img.png](https://github.com/coderhare/Learning-Notes/blob/master/images/img.png)
 
 ### valgrind包含的工具：
 
@@ -23,6 +23,7 @@ gcc -c test.c
 gcc -o test.o
 ```
 valgrind命令的参数较多,其中用法中`--tool=XXX`指定所使用的工具（见上文
+用法举例
 ```shell
 valgrind --tool=memcheck --leak-check=full ./test
 ```
