@@ -6,3 +6,5 @@ GitHub上，并且必须附上面经地址。
 >内测中
 
 此功能暂时只有本人测试.
+
+[详情](https://github.com/coderhare/Cruel_Interview)
