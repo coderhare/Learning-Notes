@@ -4,7 +4,7 @@
 template<class T>
 class MTvector{
     vector <T> arr;
-    mutable mutex m_mtx; //mutable使得size()仍可为const，但是其实际上是可以非const
+    shared_mutex m_mtx; //shared_mutex既可以共享也可以不共享
 public:
     void push_back(T i){
         m_mtx.lock();
@@ -12,9 +12,9 @@ public:
         m_mtx.unlock();
     }
     size_t size() const{
-        m_mtx.lock();
+        m_mtx.lock_shared();
         size_t sz = arr.size();
-        m_mtx.unlock();
+        m_mtx.unlock_shared();
         return sz;
     }
 };
